@@ -5,9 +5,10 @@ import type { User } from '@taskmanager/shared';
 interface HeaderProps {
   currentUser: User;
   onLogout: () => void;
+  onNavigateProfile: () => void;
 }
 
-export function Header({ currentUser, onLogout }: HeaderProps) {
+export function Header({ currentUser, onLogout, onNavigateProfile }: HeaderProps) {
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem('theme') === 'dark';
   });
@@ -41,13 +42,13 @@ export function Header({ currentUser, onLogout }: HeaderProps) {
           <div className="dot-red"></div>
         </button>
         <div className="divider-v"></div>
-        <div className="user-profile">
+        <div className="user-profile" onClick={onNavigateProfile} title="Profile">
           <div className="user-info">
             <span className="user-name">{currentUser.firstName} {currentUser.lastName}</span>
             <span className="user-role">{currentUser.role}</span>
           </div>
           <img
-            src={`https://api.dicebear.com/7.x/notionists/svg?seed=${currentUser.id}&backgroundColor=ffd5dc`}
+            src={`https://api.dicebear.com/9.x/bottts/svg?seed=${currentUser.id}&backgroundColor=ffd5dc`}
             alt={`${currentUser.firstName} ${currentUser.lastName}`}
             className="avatar"
           />

@@ -157,7 +157,7 @@ export function Dashboard({ currentUser, tasks, projects, searchQuery, onSearchC
                         <div className="card-top">
                           <span className="tag tag-discovery" style={{backgroundColor: '#e2e8f0', color: '#475569'}}>{project ? (project.name.length > 15 ? project.name.slice(0, 15) + '...' : project.name) : 'No Project'}</span>
                           <div className="assignees">
-                            <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
+                            <img src={`https://api.dicebear.com/7.x/bottts/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
                           </div>
                         </div>
                       <h4 className="card-title">{task.title}</h4>
@@ -252,7 +252,7 @@ export function Dashboard({ currentUser, tasks, projects, searchQuery, onSearchC
                     <td>{task.effortHours ? `${task.effortHours}h` : '-'}</td>
                     <td>
                       <div className="assignee-cell">
-                        <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
+                        <img src={`https://api.dicebear.com/7.x/bottts/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
                       </div>
                     </td>
                     <td className="date-cell">{new Date(task.createdAt).toLocaleDateString()}</td>

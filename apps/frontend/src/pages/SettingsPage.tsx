@@ -46,7 +46,7 @@ export function SettingsPage({ currentUser, users, onOpenUserModal, onEditUser }
                 <tr key={user.id}>
                   <td>
                     <div className="user-info-cell">
-                      <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${user.id}`} alt="User Avatar" className="user-avatar-large" />
+                      <img src={`https://api.dicebear.com/9.x/bottts/svg?seed=${user.id}&backgroundColor=ffd5dc`} alt="User Avatar" className="user-avatar-large" />
                       <div>
                         <strong>{user.firstName} {user.lastName}</strong>
                       </div>

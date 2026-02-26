@@ -3,8 +3,8 @@ import { LayoutGrid, ClipboardList, Calendar, Settings, FolderKanban } from 'luc
 import { User, UserRole } from '@taskmanager/shared';
 
 interface SidebarProps {
-  activePage: 'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS';
-  setActivePage: (page: 'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS') => void;
+  activePage: 'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS' | 'PROFILE';
+  setActivePage: (page: 'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS' | 'PROFILE') => void;
   currentUser: User;
 }
 

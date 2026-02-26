@@ -62,7 +62,7 @@ export function Tasks({ currentUser, tasks, projects, onOpenModal, onEditTask }:
                           <td>{task.effortHours ? `${task.effortHours}h` : '-'}</td>
                           <td>
                             <div className="assignee-cell">
-                              <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
+                              <img src={`https://api.dicebear.com/7.x/bottts/svg?seed=${task.assignedToUserId || task.id}`} alt="User" />
                             </div>
                           </td>
                           <td className="date-cell">{new Date(task.createdAt).toLocaleDateString()}</td>

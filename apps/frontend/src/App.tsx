@@ -18,6 +18,7 @@ import { GanttPage } from './pages/GanttPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { LoginPage } from './pages/LoginPage';
+import { ProfilePage } from './pages/ProfilePage';
 
 function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
@@ -27,7 +28,7 @@ function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [users, setUsers] = useState<User[]>([]);
-  const [activePage, setActivePage] = useState<'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS'>('BOARD_VIEW');
+  const [activePage, setActivePage] = useState<'BOARD_VIEW' | 'TASKS' | 'GANTT' | 'PROJECTS' | 'SETTINGS' | 'PROFILE'>('BOARD_VIEW');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [isUserModalOpen, setIsUserModalOpen] = useState(false);
@@ -245,7 +246,11 @@ function App() {
       <Sidebar activePage={activePage} setActivePage={setActivePage} currentUser={currentUser} />
 
       <div className="main-wrapper">
-        <Header currentUser={currentUser} onLogout={handleLogout} />
+        <Header 
+          currentUser={currentUser} 
+          onLogout={handleLogout} 
+          onNavigateProfile={() => setActivePage('PROFILE')}
+        />
 
         <div className="content-layout">
           <main className="main-content">
@@ -302,7 +307,9 @@ function App() {
                   onOpenModal={() => setIsProjectModalOpen(true)} 
                 />
               )
-            ) : (
+            ) : activePage === 'PROFILE' ? (
+              <ProfilePage currentUser={currentUser} tasks={tasks} />
+            ) : activePage === 'SETTINGS' ? (
               currentUser.role === UserRole.USER ? (
                 <div style={{ padding: '2rem', textAlign: 'center' }}>
                   <h2>Accesso Negato</h2>
@@ -322,7 +329,7 @@ function App() {
                   }}
                 />
               )
-            )}
+            ) : null}
           </main>
 
           {activePage === 'BOARD_VIEW' && <RightSidebar tasks={tasks} users={users} />}

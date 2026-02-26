@@ -326,7 +326,7 @@ export function GanttPage({ currentUser, tasks, projects, users, onOpenModal, se
           <h5>ALLOCATED TEAM</h5>
           <div className="team-avatars">
             {users.slice(0, 3).map((u, i) => (
-              <img key={u.id} src={`https://api.dicebear.com/7.x/notionists/svg?seed=${u.id}`} alt="Team Member" style={{ zIndex: 10 - i }} />
+              <img key={u.id} src={`https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}`} alt="Team Member" style={{ zIndex: 10 - i }} />
             ))}
             {users.length > 3 && (
               <span className="more-team">+{users.length - 3}</span>

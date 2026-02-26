@@ -196,7 +196,7 @@ export function TaskModal({
                   className={`user-card-selectable ${newTask.assignedToUserId === u.id ? 'selected' : ''}`}
                   onClick={() => setNewTask({...newTask, assignedToUserId: u.id})}
                 >
-                  <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${u.id}`} alt="User" />
+                  <img src={`https://api.dicebear.com/7.x/bottts/svg?seed=${u.id}`} alt="User" />
                   <span>{u.firstName}</span>
                 </div>
               ))}
