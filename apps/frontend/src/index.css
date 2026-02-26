@@ -1,0 +1,72 @@
+:root {
+  --font-family: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Layout Colors */
+  --sidebar-bg: #ffffff;
+  --main-bg: #f9fafc;
+  --right-sidebar-bg: #ffffff;
+
+  /* Brand Colors */
+  --primary: #1c64f2;
+  --primary-light: #ebf1ff;
+
+  /* Status Colors */
+  --status-todo: #9ca3af;
+  --status-dev: #06b6d4;
+  --status-bg-dev: #ccfbf1;
+  --status-text-dev: #0f766e;
+
+  --status-discovery: #6366f1;
+  --status-bg-discovery: #e0e7ff;
+  --status-text-discovery: #4338ca;
+
+  --status-design: #f59e0b;
+  --status-bg-design: #fef3c7;
+  --status-text-design: #b45309;
+
+  --status-success: #10b981;
+  --status-bg-success: #d1fae5;
+  --status-text-success: #065f46;
+
+  /* Text Colors */
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+
+  /* Borders */
+  --border-color: #e5e7eb;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--main-bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
