@@ -42,7 +42,7 @@ export class TaskService {
     const updateData = {
       ...data,
       updatedAt: new Date(),
-      updatedByUserId: 'u-1',
+      updatedByUserId: data.updatedByUserId && data.updatedByUserId.trim() !== '' ? data.updatedByUserId : null,
     };
     
     if (updateData.startedAt && typeof updateData.startedAt === 'string') {

@@ -27,7 +27,7 @@ export class UserService {
       role: data.role || 'USER',
       createdAt: new Date(),
       updatedAt: new Date(),
-      updatedByUserId: 'u-1', // Default for now
+      updatedByUserId: data.updatedByUserId && data.updatedByUserId.trim() !== '' ? data.updatedByUserId : null,
     };
 
     const [insertedUser] = await db.insert(users).values(newUser as any).returning();
@@ -40,7 +40,7 @@ export class UserService {
     const updateData: any = {
       ...data,
       updatedAt: new Date(),
-      updatedByUserId: 'u-1',
+      updatedByUserId: data.updatedByUserId && data.updatedByUserId.trim() !== '' ? data.updatedByUserId : null,
     };
 
     if (data.password) {

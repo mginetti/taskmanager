@@ -16,7 +16,7 @@ export class ProjectService {
       description: data.description || '',
       createdAt: new Date(),
       updatedAt: new Date(),
-      updatedByUserId: 'u-1', // Default for now, as we don't have proper auth session
+      updatedByUserId: data.updatedByUserId && data.updatedByUserId.trim() !== '' ? data.updatedByUserId : null,
     };
 
     const [insertedProject] = await db.insert(projects).values(newProject).returning();
