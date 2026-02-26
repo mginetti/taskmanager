@@ -41,6 +41,35 @@
     0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+[data-theme="dark"] {
+  --sidebar-bg: #1f2937;
+  --main-bg: #111827;
+  --right-sidebar-bg: #1f2937;
+
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-light: #6b7280;
+
+  --border-color: #374151;
+
+  --primary: #3b82f6;
+  --primary-light: #1e3a8a;
+
+  --status-todo: #4b5563;
+
+  --status-bg-dev: #164e63;
+  --status-text-dev: #67e8f9;
+
+  --status-bg-discovery: #312e81;
+  --status-text-discovery: #818cf8;
+
+  --status-bg-design: #78350f;
+  --status-text-design: #fcd34d;
+
+  --status-bg-success: #064e3b;
+  --status-text-success: #34d399;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

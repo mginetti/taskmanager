@@ -1,4 +1,5 @@
-import { Bell, LogOut } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Bell, LogOut, Moon, Sun } from 'lucide-react';
 import type { User } from '@taskmanager/shared';
 
 interface HeaderProps {
@@ -7,6 +8,20 @@ interface HeaderProps {
 }
 
 export function Header({ currentUser, onLogout }: HeaderProps) {
+  const [isDark, setIsDark] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    if (isDark) {
+      document.body.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
   return (
     <header className="top-header">
       <div className="header-left">
@@ -14,6 +29,13 @@ export function Header({ currentUser, onLogout }: HeaderProps) {
         <span className="badge-on-track">ON TRACK</span>
       </div>
       <div className="header-right">
+        <button 
+          className="icon-btn theme-btn" 
+          onClick={() => setIsDark(!isDark)} 
+          title="Toggle Theme"
+        >
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         <button className="icon-btn bell-btn">
           <Bell size={20} />
           <div className="dot-red"></div>

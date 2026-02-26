@@ -37,7 +37,7 @@
 .logo h2 {
   font-size: 20px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-main);
 }
 
 .nav-menu ul {
@@ -60,8 +60,8 @@
 }
 
 .nav-menu li:hover {
-  background-color: #f3f4f6;
-  color: #111;
+  background-color: var(--main-bg);
+  color: var(--text-main);
 }
 
 .nav-menu li.active {
@@ -129,7 +129,7 @@
   height: 8px;
   background-color: #ef4444;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--sidebar-bg);
 }
 
 .divider-v {
@@ -192,7 +192,7 @@
 
 .view-toggles {
   display: flex;
-  background-color: #f3f4f6;
+  background-color: var(--main-bg);
   border-radius: 12px;
   padding: 4px;
   gap: 4px;
@@ -211,7 +211,7 @@
 }
 
 .toggle-btn.active {
-  background-color: white;
+  background: var(--sidebar-bg);
   color: var(--text-main);
   box-shadow: var(--shadow-sm);
 }
@@ -228,7 +228,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 0 16px;
@@ -259,7 +259,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   color: var(--text-muted);
@@ -346,7 +346,7 @@
 
 /* Card */
 .task-card {
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px;
@@ -396,7 +396,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--sidebar-bg);
 }
 
 .assignees img.overlap {
@@ -465,7 +465,7 @@
 
 /* List View */
 .list-view {
-  background-color: white;
+  background: var(--sidebar-bg);
   border-radius: 12px;
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -479,7 +479,7 @@
 }
 
 .task-table th {
-  background-color: #f8fafc;
+  background-color: var(--main-bg);
   padding: 16px;
   font-size: 13px;
   font-weight: 600;
@@ -498,7 +498,7 @@
 }
 
 .task-table tr:hover td {
-  background-color: #f9fafc;
+  background-color: var(--main-bg);
 }
 
 .task-table td strong {
@@ -526,7 +526,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--sidebar-bg);
 }
 
 .date-cell {
@@ -536,7 +536,7 @@
 
 /* Gantt View */
 .gantt-view {
-  background-color: white;
+  background: var(--sidebar-bg);
   border-radius: 12px;
   border: 1px solid var(--border-color);
   overflow-x: auto;
@@ -564,7 +564,7 @@
   align-items: center;
   position: sticky;
   left: 0;
-  background-color: white;
+  background: var(--sidebar-bg);
   z-index: 10;
 }
 
@@ -618,7 +618,7 @@
   border-right: 1px solid var(--border-color);
   position: sticky;
   left: 0;
-  background-color: white;
+  background: var(--sidebar-bg);
   z-index: 10;
 }
 
@@ -778,7 +778,7 @@
 
 .activity-content p strong {
   font-weight: 600;
-  color: #111;
+  color: var(--text-main);
 }
 
 .activity-content .time {
@@ -788,7 +788,7 @@
 
 /* Progress Widget */
 .progress-widget {
-  background-color: #ffffff;
+  background-color: var(--sidebar-bg);
   border-radius: 12px;
   padding: 20px;
   border: 1px solid var(--border-color);
@@ -915,7 +915,7 @@
 }
 
 .modal-content {
-  background-color: white;
+  background: var(--sidebar-bg);
   width: 100%;
   max-width: 600px;
   border-radius: 16px;
@@ -1025,7 +1025,7 @@
   transition: border-color 0.2s;
   box-sizing: border-box;
   font-family: inherit;
-  background-color: white;
+  background: var(--sidebar-bg);
 }
 
 .form-group input:focus,
@@ -1064,7 +1064,7 @@
   gap: 4px;
   padding: 8px 12px;
   border-bottom: 1px solid var(--border-color);
-  background-color: #f8fafc;
+  background-color: var(--main-bg);
 }
 
 .editor-toolbar button {
@@ -1235,7 +1235,7 @@
 
 .segmented-control {
   display: flex;
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 4px;
@@ -1254,7 +1254,7 @@
 }
 
 .segmented-control button.active {
-  background-color: white;
+  background: var(--sidebar-bg);
   color: var(--text-main);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   font-weight: 600;
@@ -1325,7 +1325,7 @@
 }
 
 .gantt-view.standalone {
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: auto;
@@ -1341,7 +1341,7 @@
 
 .gantt-widget {
   flex: 1;
-  background-color: white;
+  background: var(--sidebar-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 24px;
@@ -1408,7 +1408,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--sidebar-bg);
   margin-left: -8px;
   background-color: #f1f5f9;
 }
@@ -1420,7 +1420,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #f8fafc;
+  background-color: var(--main-bg);
   border: 2px dashed var(--border-color);
   margin-left: -8px;
   display: flex;
@@ -1461,7 +1461,7 @@
 }
 
 .list-view.standalone {
-  background: white;
+  background: var(--sidebar-bg);
   border-radius: 12px;
   border: 1px solid var(--border-color);
   padding: 0;
@@ -1469,7 +1469,7 @@
 }
 
 .project-table th {
-  background-color: #f8fafc;
+  background-color: var(--main-bg);
   font-size: 12px;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -1693,7 +1693,7 @@
 .login-card {
   width: 100%;
   max-width: 400px;
-  background: white;
+  background: var(--sidebar-bg);
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
