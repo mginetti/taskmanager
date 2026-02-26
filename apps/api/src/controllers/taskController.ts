@@ -17,8 +17,9 @@ export class TaskController {
       const taskData = req.body;
       const newTask = await taskService.createTask(taskData);
       res.status(201).json(newTask);
-    } catch (error) {
-      res.status(500).json({ error: 'Internal Server Error' });
+    } catch (error: any) {
+      console.error("Create task error", error);
+      res.status(500).json({ error: 'Errore interno del server' });
     }
   }
 

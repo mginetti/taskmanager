@@ -22,15 +22,15 @@ export class TaskService {
     new Task(data); // Validate inputs
     const newTask = {
       id: `t-${Date.now()}`,
-      projectId: data.projectId || 'p-1', // Default to 'p-1' if not provided
+      projectId: data.projectId && data.projectId.trim() !== '' ? data.projectId : 'p-1', // Default to p-1 only if needed but ideally frontend provides it
       title: data.title || 'Nuovo Task',
       description: data.description || '',
       status: data.status || 'DA_FARE',
       effortHours: data.effortHours || 0,
-      assignedToUserId: data.assignedToUserId || 'u-1',
+      assignedToUserId: data.assignedToUserId && data.assignedToUserId.trim() !== '' ? data.assignedToUserId : null,
       createdAt: data.createdAt ? new Date(data.createdAt) : new Date(),
       updatedAt: new Date(),
-      updatedByUserId: 'u-1',
+      updatedByUserId: data.updatedByUserId && data.updatedByUserId.trim() !== '' ? data.updatedByUserId : null,
     };
 
     const [insertedTask] = await db.insert(tasks).values(newTask as any).returning();
