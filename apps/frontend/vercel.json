@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://<TUO_INDIRIZZO_RENDER>.onrender.com/api/:path*"
+      "destination": "https://taskmanager-api-f403.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
