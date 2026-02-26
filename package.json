@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w @taskmanager/shared\" \"npm run dev -w api\" \"npm run dev -w frontend\"",
     "build": "npm run build --workspaces",
-    "lint": "npm run lint --workspaces"
+    "lint": "npm run lint --workspaces",
+    "build:api": "npm run build -w @taskmanager/shared && npm run build -w api",
+    "start:api": "npm run start -w api"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
